@@ -6,7 +6,7 @@ A collection of lightweight, practical Android apps by **AminToor** — focused 
 
 | App | Version | Package | Download |
 |-----|---------|---------|----------|
-| ✅ **AminToor To-Do** | v1.0 | `com.amintoortodo.app` | [AminToor-To-Do.apk](apps/todo/AminToor-To-Do.apk) |
+| ✅ **AminToor To-Do** | v1.1.0 | `com.amintoortodo.app` | [AminToor-To-Do.apk](apps/todo/AminToor-To-Do.apk) |
 | 🔄 **AminToor Converter** | v1.1.0 | `com.amintoor.converter` | [AminToor-Converter-v1.1.apk](apps/converter/AminToor-Converter-v1.1.apk) |
 | 🧊 **3D File Viewer** | v1.2.0 | `com.amintoor.viewer3d` | [AminToor-3D-File-Viewer-v1.2.apk](apps/3d-file-viewer/AminToor-3D-File-Viewer-v1.2.apk) |
 
@@ -23,8 +23,9 @@ A collection of lightweight, practical Android apps by **AminToor** — focused 
 A clean, fast to-do list for daily tasks.
 
 **What you can do:**
-- Add tasks with name + optional note
-- Add due dates, including Today
+- Add tasks with name + optional note, and set due dates
+- Tap the microphone and speak a task in Hindi, Hinglish, or English; recognized date and priority are saved with it
+- Understands dates such as “27 तारीख”, month names, `DD/MM`, today, and tomorrow; Medium is the default priority
 - Edit tasks and delete with confirmation
 - Search tasks (“Find a task”) with empty-state guidance
 - Filter your list
@@ -33,10 +34,11 @@ A clean, fast to-do list for daily tasks.
 **Details:**
 - File: `apps/todo/AminToor-To-Do.apk`
 - Package: `com.amintoortodo.app`
+- Version: 1.1.0 (versionCode 2)
 - Min. Android: 6.0 (API 23)
 - Target: Android 12L (API 32)
-- Size: 25,409 bytes (~25 KB)
-- SHA-256: `6de6374ed1bac47dbaea9fdb448233aa33e26062eedccb9c3630eab7bbf804ca`
+- Size: 33,601 bytes (~33 KB)
+- SHA-256: `bc0b56112728f7fd4dcbad61519829497ec4a2a7e5c752f87b632f2e0b01dd0e`
 
 Full notes: [apps/todo/README.md](apps/todo/README.md)
 
@@ -140,6 +142,7 @@ amintoor-android-apps/
 │   └── icons/
 ├── apps/
 │   ├── todo/AminToor-To-Do.apk
+│   ├── todo/README.md
 │   ├── converter/AminToor-Converter-v1.1.apk
 │   └── 3d-file-viewer/AminToor-3D-File-Viewer-v1.2.apk
 └── docs/
@@ -155,6 +158,7 @@ amintoor-android-apps/
 
 - **v1.2.0 — 3D File Viewer**: recent-files library, favorites, position controls, GLB/glTF support
 - **v1.1 — AminToor Converter**: PDF merge/split, PPTX→PDF, images→PDF
+- **v1.1.0 — AminToor To-Do**: voice task entry with Hindi/Hinglish/English date and priority parsing
 - **v1.0 — AminToor To-Do**: tasks with notes, due dates, search & filters
 
 See [docs/RELEASES.md](docs/RELEASES.md) and [docs/CHANGELOG.md](docs/CHANGELOG.md).
@@ -163,7 +167,7 @@ See [docs/RELEASES.md](docs/RELEASES.md) and [docs/CHANGELOG.md](docs/CHANGELOG.
 
 ## Privacy & permissions
 
-- **To-Do**: no special runtime permissions found in manifest. Tasks are stored on-device (`SharedPreferences`).
+- **To-Do**: microphone permission is requested only after tapping the voice button. Android's speech-recognition service handles recognition according to device/service settings; the app stores task fields locally (`SharedPreferences`), not recordings or transcripts.
 - **Converter**: uses file/document access to open and save PDFs/images. Includes `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` (internal broadcast protection).
 - **3D Viewer**: uses file access to open models (`viewer_file_access`). Includes `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`.
 
