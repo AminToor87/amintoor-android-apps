@@ -1,29 +1,38 @@
 # AminToor To-Do
 
-A clean, fast task manager for everyday use.
+A lightweight task manager with quick voice entry for Hindi, Hinglish, and English commands.
 
 - **APK:** [AminToor-To-Do.apk](AminToor-To-Do.apk)
+- **Version:** 1.1.0 (versionCode 2)
 - **Package:** `com.amintoortodo.app`
 - **Main activity:** `com.amintoortodo.app.MainActivity`
-- **Min. Android:** 6.0 (API 23) · **Target:** Android 12L (API 32)
-- **Size:** 25,409 bytes (~25 KB)
-- **SHA-256:** `6de6374ed1bac47dbaea9fdb448233aa33e26062eedccb9c3630eab7bbf804ca`
+- **Android:** 6.0+ (API 23), target Android 12L (API 32)
+- **Size:** 33,601 bytes (~33 KB)
+- **SHA-256:** `bc0b56112728f7fd4dcbad61519829497ec4a2a7e5c752f87b632f2e0b01dd0e`
 
-## Features (confirmed in build)
+## Features
 
-- “Add a task whenever something comes to mind”
-- Task name + optional note (“Add a note (optional)”)
-- Due dates (“Add due date”, “Today”)
-- Edit task / Delete (with “Task deleted” confirmation)
-- Search (“Find a task”) with “No matching tasks / Try another search” states
-- Filters
-- “Your tasks” home list, “What needs to get done” prompt
-- On-device storage (`SharedPreferences`), no special runtime permissions in manifest
+- Add, edit, complete, and delete tasks; add an optional note.
+- Set due dates, search tasks, and filter the list.
+- Tap the microphone button and speak a task. The app extracts a title, date, and priority from supported Hindi/Hinglish and English phrases, then saves the task to the existing list.
+- Examples: “27 तारीख को हाई प्रायोरिटी डॉक्टर से अपॉइंटमेंट लेना है” and “November 27, high priority, submit the report.” A day without a month (such as “27 तारीख”) means the next upcoming 27th. The parser also recognizes month names, numeric `DD/MM` dates, today, and tomorrow. If no priority is stated, the task is Medium.
+- Voice-created tasks stay editable and are stored with other tasks on-device in `SharedPreferences`.
 
-## Install
+## Microphone and speech recognition
 
-1. Download `AminToor-To-Do.apk`
-2. Open it on Android 6.0+
-3. Allow “Install unknown apps” if asked → Install
+The app asks for microphone permission only after you tap the microphone button. Recognition uses the Android speech-recognition service available on the device, with Hindi (`hi-IN`) as the preferred language. Availability and whether recognition is processed on-device or by a service/network depend on the installed recognizer and device settings. AminToor To-Do does not save audio recordings or voice transcripts; it saves the parsed task fields.
 
-Verify: `sha256sum AminToor-To-Do.apk` must match the hash above.
+## Install or update
+
+1. Download `AminToor-To-Do.apk` and open it on Android 6.0 or newer.
+2. Allow “Install unknown apps” if Android asks, then tap **Install**.
+3. If updating an existing AminToor To-Do installation, the same package and release signing key are used; Android should retain the app's locally stored tasks.
+4. Grant microphone access only if you want to add tasks by voice.
+
+Verify the file with:
+
+```sh
+sha256sum AminToor-To-Do.apk
+```
+
+The result must match the SHA-256 value above.
