@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-01 — AminToor To-Do v1.1.0
+
+- Added microphone-based task entry with Hindi/Hinglish/English speech recognition
+- Extracts day/month dates and low/medium/high priority, then saves into the existing task list
+- Added runtime microphone permission and Android speech-service visibility
+- Preserved the To-Do release signing certificate; versionCode is now 2
+- Added clear feedback for denied microphone permission or unavailable speech recognition
+
 ## 2026-11-01 — Public GitHub release
 
 - Published all three signed APKs in one repository

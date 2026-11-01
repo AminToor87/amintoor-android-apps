@@ -3,7 +3,7 @@
 Verify your APK before installing:
 
 ```text
-6de6374ed1bac47dbaea9fdb448233aa33e26062eedccb9c3630eab7bbf804ca  AminToor-To-Do.apk
+bc0b56112728f7fd4dcbad61519829497ec4a2a7e5c752f87b632f2e0b01dd0e  AminToor-To-Do.apk
 5656224682b2572cfcc87865cf47551859f6aa10c9be75d0844d019fde5c7f30  AminToor-Converter-v1.1.apk
 7a25a6f4376f536c56f3df6fc463d5557e2a62d552de18a875c7d0aede096449  AminToor-3D-File-Viewer-v1.2.apk
 ```

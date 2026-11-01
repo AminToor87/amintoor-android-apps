@@ -1,6 +1,16 @@
 # Releases
 
-## v1.2.0 — 3D File Viewer (latest)
+## v1.1.0 — AminToor To-Do (latest, versionCode 2)
+
+- Tap the microphone to speak a Hindi, Hinglish, or English task
+- Extracts dates such as “27 तारीख”, month names, `DD/MM`, today, and tomorrow
+- Recognizes Low / Medium / High priority; defaults to Medium
+- Uses Android speech recognition and saves the parsed task in the existing on-device list
+- Package `com.amintoortodo.app`, Android 6.0+, target Android 12L
+
+Asset: `apps/todo/AminToor-To-Do.apk` (33,601 bytes)
+
+## v1.2.0 — 3D File Viewer
 
 - Open & explore 3D models: STL, OBJ, PLY, 3MF, GLB, glTF (+ MTL/BIN/textures)
 - Recent-files library, Search, See all, Favorites
